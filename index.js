@@ -6,14 +6,14 @@ const app = express()
 
 
 //middlewares
-require("dotenv").config
+require("dotenv").config()
 
 
 
 
 
 //routes
-
+app.use("/", require("./routes/index"))
 
 
 
