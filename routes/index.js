@@ -3,11 +3,12 @@
 const express = require("express")
 const router = express.Router()
 
+const indexController = require("./../controllers/indexController")
+
 
 //ruteo
-router.get("/", (req,res)=> {
-    res.send("hola")
-})
+router.get("/",indexController.getHome)
+
 
 
 //exportacoin
