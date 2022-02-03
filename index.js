@@ -1,21 +1,21 @@
-// importaciones
-const express = require("express")
-const app = express()
+// ./index.js
 
+// 1. IMPORTACIONES
+const express			= require("express")
+const app				= express()
 
+const connectDB			= require("./config/db")
 
-
-//middlewares
+// 2. MIDDLEWARES
 require("dotenv").config()
 
+connectDB()
 
 
-
-
-//routes
+ 
+// 3. RUTEO
 app.use("/", require("./routes/index"))
 
 
-
-//servidor
-app. listen(process.env.PORT, () => console.log(`servidor activo en ${process.env.PORT}`))
+// 4. SERVIDOR
+app.listen(process.env.PORT, () => console.log(`Servidor activo en puerto ${process.env.PORT}`))
