@@ -15,7 +15,7 @@ app.use(express.static("public"))
 app.set("views", __dirname + "/views")
 app.set("view engine", "hbs")
 
-
+app.use(express.urlencoded({extended:true}))        //linea responsable que permite enviar los datos de la pagina 
 
  
 // 3. RUTEO
