@@ -10,6 +10,7 @@ const indexController = require("./../controllers/indexController")
 router.get("/",indexController.getHome)
 
 
+//
 
 //exportacoin
 
