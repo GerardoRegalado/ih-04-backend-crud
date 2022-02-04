@@ -1,9 +1,18 @@
 
-    <h1>Listado de libros</h1>
-    {{#each data}}
-        <div>
-            <h3>{{title}}</h3>
-            <a href="/books/{{_id}}">Ver detalles...</a>
-        </div>
-    {{/each}}
+{{!-- ./views/books/list.hbs --}}	
+
+<h1>Listado de libros</h1>
+
+<a href="/boos/create">Crear libro</a>
+	{{#each data }}
+		<div>
+			<h3>{{title}}</h3>
+			<a href="/books/{{_id}}">Ver detalles</a>
+			<a href="/books/{{_id}}/edit">Editar</a>
+			
+			<form action="/books/{{_id}}/delete" method="POST">
+				<button>Borrar</button>				
+			</form>
+		</div>
+	{{/each}}
     
